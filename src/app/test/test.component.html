@@ -1,0 +1,13 @@
+<section class="py-96 px-60">
+    <!-- <app-rating [value]="ratingvalue"></app-rating> -->
+
+<form>
+   <input type="text"name='name' (change)="onChange($event)">
+   <input type="text" name="email" [formControl]="email" (click)="formsubmit()">
+<button >submit</button>
+</form>
+<div *ngIf="email.hasError('minlength')">minmum length three</div>
+<div *ngIf="email.hasError('required')">required fild</div>
+<div *ngIf="email.hasError('maxlength')">maxmum length three</div>
+<h1>{{name}}</h1>
+</section>

@@ -1,0 +1,31 @@
+
+
+<button class="relative group transition-all duration-500 overflow-clip
+{{
+    this.animation==='F'&& this.shade==='D'?'hover:bg-white':
+    this.animation==='F'&& this.shade==='L'?'hover:bg-white':
+    this.animation==='F'&& this.shade==='W'?'hover:bg-blue-500':
+    ''
+}} 
+{{
+this.shade==='D'?'border bg-blue-500 text-white border-black-500  hover:text-blue-400':
+this.shade==='L'?'border bg-blue-400 text-black  hover:text-blue-400':
+this.shade==='W'?'bg-white border border-blue-500  hover:text-white' :'text-blue-400  hover:text-black'}}  
+
+{{this.size==='S'?'rounded-lg font-medium px-4 py-2 text-md':
+this.size==='M'?'px-10 py-3 rounded-lg font-medium font-blod': 
+'px-8 py-4 rounded-xl font-semibold text-lg font-blod'}}">
+<span class=" z-30 relative ">{{this.name}}</span>
+<span *ngIf="this.shade!='NA'" class="absolute top-[50%] left-[50%] bg-blue-400 z-20  transition-all duration-1000 groub-hover:opacity-200
+-transulate-x-[50%]  -transulate-y-[50%]  opacity-0 group-hover:opacity-100 w-[20%] group-hover:w-[200%] rounded-full 
+{{this.shade==='D'?'bg-white':'bg-blue-400'}}"></span>
+
+ </button>
+ <!-- <span class="relative z-30">{{this.name}}click me</span>
+<span *ngIf="this.shade!='NA'" class="absolute top-[50%] left-[50%]  aspect-square w-[20%] transition-all duration-500 
+ -transulate-x-[50%] -transulate-y-[50%] group-hover:w-[200%] z-20 rounded-full opacity-0 group-hover:opacity-100
+ {{this.shade==='D'?'bg-white':'bg-blue-400'}}"></span> -->
+
+
+
+ 
